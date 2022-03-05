@@ -25,15 +25,16 @@ if ($page_title == '') {
 
     
     <header>
-        <a href="index.php"><img src="<?php echo $site_logo?>" alt="<?php echo $site_name?>"></a>
+        <a href="index.php"><img src="<?php echo $site_logo?>" alt="<?php echo $site_name?>" width="90px" height="90px"></a>
         <h1>Programing</h1>
     </header>
 
     <nav>
-        <a href="_modelo.php">Inicio</a>
-         <a href="noticias.php">Noticias</a>
-         <a href="midia.php">Midias</a>
-         <a href="sobre.php">Sobre</a>
+        <a href="/">Inicio</a>
+         <a href="/page/noticias.php">Noticias</a>
+         <a href="/page/midia.php">Midias</a>
+         <a href="/page/sobre.php">Sobre</a>
+         <a href="/page/contatos.php">Contatos</a>
     </nav>
 
 
