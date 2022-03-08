@@ -34,7 +34,7 @@ if ($page_title == '') {
          <a href="/page/noticias.php">Noticias</a>
          <a href="/page/midia.php">Midias</a>
          <a href="/page/sobre.php">Sobre</a>
-         <a href="/page/contatos.php">Contatos</a>
+         <a href="/page/contatos.php">Contato</a>
     </nav>
 
 
