@@ -58,6 +58,31 @@
 
     */
 
+    /******************************************************
+     * Gera variáveis do tema à partir do banco de dados. *
+     ******************************************************/
+
+    $sql = "SELECT * FROM config;";
+    $res = $conn->query($sql);
+    while ($x = $res->fetch_assoc()) :
+
+        $p = explode('_', $x['var']);
+        $var = $p[0];
+        $key = $p[1];
+
+        $$var[$key] = $x['val'];
+
+    endwhile;
+
+    // echo '<pre>';
+    // print_r($site);
+    // print_r($social);
+    // print_r($tema);
+    // echo '</pre>';
+
+    /*
+    * Dica: No futuro, essas variáveis poderiam ser obtidas do banco de dados.
+    */
 
     /*
      * Variáveis do tema
