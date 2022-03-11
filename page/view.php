@@ -68,10 +68,10 @@ HTML;
  *********************************************/
 
 // Define o título DESTA página.
-$page_title = "Artigo Completo";
+$page_title = $art['article_title'];
 
 // Opção ativa no menu
-$page_menu = "Noticias";
+$page_menu = "articles";
 
 // Inclui o cabeçalho da página
 require_once $_SERVER['DOCUMENT_ROOT'] . "/_header.php";
@@ -82,7 +82,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/_header.php";
 ?>
 <article>
 
-<?php echo $art_view ?>
+    <?php echo $art_view ?>
 
 </article>
 
@@ -97,6 +97,10 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/_header.php";
         <li><a href="/sections/back.php">Back-end</a></li>
         <li><a href="/sections/full.php">Full-stack</a></li>
     </ul>
+
+    <h3>Autor</h3>
+
+    <?php echo $aut_view ?>
 
 </aside>
 

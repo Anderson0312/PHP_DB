@@ -179,4 +179,4 @@ INSERT INTO config ( var, val, descrition ) VALUES
 ('social_facebook', 'https://facebook.com/Decodificando', 'Rede social'),
 ('social_github', 'https://github.com/Decodificando', 'Rede social'),
 ('social_whatsapp', 'https://wa.me/5521987654321', 'Rede social'),
-('social_youtube', 'https://youtube.com/Decodificando', 'Rede social');
+('social_youtube', 'https://youtube.com/Decodificando', 'Rede social'); 

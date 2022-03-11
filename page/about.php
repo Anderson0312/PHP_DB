@@ -3,30 +3,21 @@
 // Inclui arquivo de configuração
 require_once $_SERVER['DOCUMENT_ROOT'] . "/_config.php";
 
-/*******************************************
- * Seu código PHP desta página entra aqui! *
- *******************************************/
-
-/*********************************************
- * Seu código PHP desta página termina aqui! *
- *********************************************/
-
 // Define o título DESTA página.
-$page_title = "";
+$page_title = "Sobre";
 
 // Opção ativa no menu
-$page_menu = "index";
+$page_menu = "about";
 
-// Inclui o cabeçalho da página
+// Inclui o cbeçalho da página
 require_once $_SERVER['DOCUMENT_ROOT'] . "/_header.php";
 
 ?>
 
-<?php // Conteúdo 
-?>
+<?php // Conteúdo ?>
 <article>
 
-    <h2>Página inicial</h2>
+    <h2>Sobre</h2>
 
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil obcaecati id recusandae minus porro
         laudantium rem. Similique repellendus incidunt ad labore unde voluptates, recusandae at, expedita magnam
@@ -35,8 +26,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/_header.php";
     <h3>Links:</h3>
 
     <ul>
-        <?php // O atributo 'target="_blank"' do link força a abertura em outra guia do navegador 
-        ?>
+        <?php // O atributo 'target="_blank"' do link força a abertura em outra guia do navegador ?>
         <li><a href="http://catabits.com.br" target="_blank">Site do Fessô</a></li>
         <li><a href="https://americanas.com" target="_blank">Site Hackeado</a></li>
         <li><a href="https://www.rj.senac.br" target="_blank">Senac RJ</a></li>
@@ -56,8 +46,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/_header.php";
 
 </article>
 
-<?php // Barra lateral 
-?>
+<?php // Barra lateral ?>
 <aside>
 
     <h3>Seções:</h3>

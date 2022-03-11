@@ -3,7 +3,6 @@
 // Inclui arquivo de configuração
 require_once $_SERVER['DOCUMENT_ROOT'] . "/_config.php";
 
-
 /*******************************************
  * Seu código PHP desta página entra aqui! *
  *******************************************/
@@ -80,29 +79,29 @@ HTML;
  * Seu código PHP desta página termina aqui! *
  *********************************************/
 
-
-// Define o titilo dessa pagina
-$page_title = '';
+// Define o título DESTA página.
+$page_title = "";
 
 // Opção ativa no menu
 $page_menu = "index";
 
-// Inclui o cbeçalho da página
+// Inclui o cabeçalho da página
 require_once $_SERVER['DOCUMENT_ROOT'] . "/_header.php";
 
 ?>
 
-<?php // Conteúdo ?>
+<?php // Conteúdo 
+?>
 <article>
 
-<div class="featured">
+    <div class="featured">
         <?php echo $featured_arts ?>
     </div>
 
-
 </article>
 
-<?php // Barra lateral ?>
+<?php // Barra lateral 
+?>
 <aside>
 
     <h3>Seções:</h3>
@@ -112,6 +111,10 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/_header.php";
         <li><a href="/sections/back.php">Back-end</a></li>
         <li><a href="/sections/full.php">Full-stack</a></li>
     </ul>
+
+    <h3>Leia também</h3>
+
+    <?php echo $rnd_art ?>
 
 </aside>
 

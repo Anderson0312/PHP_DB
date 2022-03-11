@@ -1,4 +1,3 @@
-
 <?php
 
 // Inclui arquivo de configuração
@@ -27,44 +26,54 @@ ORDER BY article_date DESC;
 SQL;
 
 $res = $conn->query($sql);
-while ($art = $res->fetch_assoc()) {
+while ($art = $res->fetch_assoc()) :
 
     $art_list .= <<<HTML
 
 <div class="article-item">
 
     <div class="article-item-img">
-        <a href="/page/view.php?id={$art['article_id']}"><img src="{$art['article_image']}" alt="{$art['article_title']}"></a>
+        <a href="/page/view.php?id={$art['article_id']}" title="Clique para ver o artigo completo."><img src="{$art['article_image']}" alt="{$art['article_title']}"></a>
     </div>
 
     <div class="article-item-intro">
-        <h3><a href="/page/view.php?id={$art['article_id']}">{$art['article_title']}</a></h3>
+        <h3><a href="/page/view.php?id={$art['article_id']}" title="Clique para ver o artigo completo.">{$art['article_title']}</a></h3>
         {$art['article_intro']}
     </div>
 
 </div>
 
 HTML;
-}
+endwhile;
 
 /*********************************************
  * Seu código PHP desta página termina aqui! *
  *********************************************/
 
-// Define o titilo dessa pagina
-$page_title = 'Noticias';
+// Define o título DESTA página.
+$page_title = "Artigos";
 
-// Inclui o cbeçalho da página
+// Opção ativa no menu
+$page_menu = "articles";
+
+// Inclui o cabeçalho da página
 require_once $_SERVER['DOCUMENT_ROOT'] . "/_header.php";
 
 ?>
 
-<main>
-        <h2>Noticias mais relevantes</h2>
+<?php // Conteúdo 
+?>
+<article>
 
-        <?php echo $art_list ?>
-        
-        <aside>
+    <h2>Artigos Recentes</h2>
+
+    <?php echo $art_list ?>
+
+</article>
+
+<?php // Barra lateral 
+?>
+<aside>
 
     <h3>Seções:</h3>
 
@@ -74,8 +83,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/_header.php";
         <li><a href="/sections/full.php">Full-stack</a></li>
     </ul>
 
-    </aside>
-    </main>
+</aside>
 
 <?php
 
