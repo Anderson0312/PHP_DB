@@ -55,7 +55,7 @@ while ($x = $res->fetch_assoc()) :
      * Quebra o nome da variável, obtida do DB. Ex.:
      *   site_name ==> $var => 'site' e $key => 'name'
      *   site_logo ==> $var => 'site' e $key => 'logo'
-     */ 
+     */
     $p = explode('_', $x['var']);
     $var = $p[0];
     $key = $p[1];
@@ -64,7 +64,7 @@ while ($x = $res->fetch_assoc()) :
      * Cria variáveis (arrays) de configuração. Ex.:
      *   site_name ==> $var => 'site' e $key => 'name' então, $site['name'] => $x[val] 
      *   site_logo ==> $var => 'site' e $key => 'logo' então, $site['logo'] => $x[val] 
-     */ 
+     */
     $$var[$key] = $x['val'];
 
 endwhile;
@@ -136,4 +136,11 @@ function sanitize($field_name, $field_type)
 
     // Retorna o valor do campo já sanitizado.
     return $field_value;
+}
+
+// Valida datas
+function validateDate($date, $format = 'Y-m-d')
+{
+    $d = DateTime::createFromFormat($format, $date);
+    return $d && $d->format($format) == $date;
 }
