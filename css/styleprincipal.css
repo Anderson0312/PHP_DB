@@ -1,0 +1,122 @@
+/* CSS Reset */
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 16px;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+li {
+    list-style: none;
+}
+
+
+/*----------------header -----------*/
+
+header {
+    background-color: rgb(88, 88, 107);
+    display: flex;
+}
+
+header img {
+    width: 80px;
+    height: 80px;
+    
+}
+
+small {
+    display: block;
+    font-size: 0.9rem;
+}
+
+
+nav {
+    background-color: black;
+    padding: 10px;
+}
+
+nav a {
+    margin: 10px;
+    text-decoration: none;
+    color: white;
+    padding: 3px;
+}
+
+nav a:hover {
+    background-color: gray;
+    border-radius: 4px;
+}
+
+
+
+/*----------------main -----------*/
+
+
+main a:hover {
+    color: blue;
+}
+
+
+
+
+
+/*----------------footer -----------*/
+
+footer {
+    background-color: black;
+    color: white;
+    bottom: 0;
+    text-decoration: none;
+}
+
+footer div {
+    display: flex;
+    align-items: center;
+    margin: auto
+
+}
+
+.copy {
+    padding: 10px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+
+}
+
+footer a:hover {
+    color: rgb(95, 95, 219);
+    list-style: square;
+}
+
+.linksnavegação a {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+    margin-top: 20px;
+
+}
+
+.linksnavegação a:hover {
+    background-color:gray;
+    color: black
+}

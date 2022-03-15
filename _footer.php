@@ -1,11 +1,11 @@
 
 
     <footer>
-        <div>
+        <div class='linksnavegação'>
 
             <a href="/" title="Página inicial">Início</a>
 
-            <div>&copy; Copyright 2022 <?php if (date('Y') > '2022') echo ' - ' . date('Y') ?> <?php echo $site['owner'] ?>.</div>
+            <div class='copy'>&copy; Copyright 2022 <?php if (date('Y') > '2022') echo ' - ' . date('Y') ?> <?php echo $site['owner'] ?>.</div>
 
             <a href="#top" title="Topo da página">Topo</a>
 

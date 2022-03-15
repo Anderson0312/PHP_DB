@@ -39,6 +39,9 @@ $social_list .= '</ul>';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/img/favicon.png">
     <title><?php echo $page_title; ?></title>
+    <style><?php echo $site['css'] ?></style>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/css/styleprincipal.css">
 </head>
 
 <body>
@@ -60,15 +63,26 @@ $social_list .= '</ul>';
 
         <a href="/"><?php if ($page_menu == 'index') echo "<strong>INÍCIO</strong>";
                     else echo "Início"; ?></a>
-        &bull;
-        <a href="/page/articles.php"><?php if ($page_menu == 'articles') echo "<strong>ARTIGOS</strong>";
-                                        else echo "Artigos"; ?></a>
-        &bull;
-        <a href="/page/contacts.php"><?php if ($page_menu == 'contacts') echo "<strong>FAÇA CONTATO</strong>";
-                                        else echo "Faça Contato"; ?></a>
-        &bull;
+
+        <a href="/page/articles.php"><?php if ($page_menu == 'articles') echo "<strong>ARTIGOS</strong>"; else echo "Artigos"; ?></a>
+
+        <a href="/page/contacts.php"><?php if ($page_menu == 'contacts') echo "<strong>FAÇA CONTATO</strong>"; else echo "Faça Contato"; ?></a>
+
         <a href="/page/about.php"><?php if ($page_menu == 'about') echo "<strong>SOBRE</strong>";
                                     else echo "Sobre"; ?></a>
+        <?php if (!isset($_COOKIE['user'])) : ?>
+            <a href="/user/new.php"><?php if ($page_menu == 'new') echo "<strong>CADASTRE-SE</strong>";
+                                    else echo "Cadastre-se"; ?></a>
+
+            <a href="/user/login.php"><?php if ($page_menu == 'login') echo "<strong>LOGUE-SE</strong>";
+                                        else echo "Logue-se"; ?></a>
+        <?php else : ?>
+
+            <a href="/user/profile.php"><?php if ($page_menu == 'profile') echo "<strong>OLÁ!</strong>";
+                                        else echo "Olá!"; ?></a>
+
+
+        <?php endif; ?>
 
     </nav>
 
