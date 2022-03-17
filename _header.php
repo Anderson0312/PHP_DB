@@ -78,8 +78,8 @@ $social_list .= '</ul>';
                                         else echo "Logue-se"; ?></a>
         <?php else : ?>
 
-            <a href="/user/profile.php"><?php if ($page_menu == 'profile') echo "<strong>OLÁ!</strong>";
-                                        else echo "Olá!"; ?></a>
+            <a href="/user/profile.php"><?php if ($page_menu == 'profile') echo "<strong>OLÁ {$user['first_name']}!</strong>";
+                                        else echo "Olá {$user['first_name']}!"; ?></a>
 
 
         <?php endif; ?>
