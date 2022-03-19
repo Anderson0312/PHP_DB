@@ -70,6 +70,7 @@ $social_list .= '</ul>';
 
         <a href="/page/about.php"><?php if ($page_menu == 'about') echo "<strong>SOBRE</strong>";
                                     else echo "Sobre"; ?></a>
+                                    
         <?php if (!isset($_COOKIE['user'])) : ?>
             <a href="/user/new.php"><?php if ($page_menu == 'new') echo "<strong>CADASTRE-SE</strong>";
                                     else echo "Cadastre-se"; ?></a>
